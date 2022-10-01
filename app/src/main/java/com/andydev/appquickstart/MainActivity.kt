@@ -3,23 +3,25 @@ package com.andydev.appquickstart
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import java.sql.DriverManager.println
 
-class MainActivity : AppCompatActivity()
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mostrarHola()
-        mostraradios()
+
+        var x = 40
+        var y = 60
+
+        sumaNumeros(x, y)
     }
 
-    fun mostrarHola(){
-        println("HOLA KOTLIN!")
-    }
+    fun sumaNumeros( num1: Int , num2: Int){
 
-    fun mostraradios() {
-        println("adios kotlin!")
+        var suma = num1 + num2
+
+        Log.v("hl","la suma de los numeros es " + suma)
+
     }
 
 }
